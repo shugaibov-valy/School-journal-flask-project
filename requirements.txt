@@ -1,6 +1,3 @@
-flask
-json
-mysql
-js
-jquery
-bootstrap
+  
+flask 1.1.2
+mysql-connector-python 8.0.20
