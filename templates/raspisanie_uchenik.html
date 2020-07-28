@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Add some information about the album below, the author, or any other
+                        background context. Make it a few sentences long so folks can pick up some informative tidbits.
+                        Then, link them off to some social networking sites or contact information.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="#" class="text-white">Like on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                     viewBox="0 0 24 24" focusable="false">
+
+                </svg>
+                <strong>Класс 8 "1"</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="wrapper">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th><h4>Понедельник</h4></th>
+            <th><h4>Вторник</h4></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1. {{ myresult[0][1] }}</td>
+            <td>1. {{ myresult[0][2] }}</td>
+        </tr>
+        <tr>
+            <td>2. {{ myresult[1][1] }}</td>
+            <td>2. {{ myresult[1][2] }}</td>
+        </tr>
+        <tr>
+            <td>3. {{ myresult[2][1] }}</td>
+            <td>3. {{ myresult[2][2] }}</td>
+        </tr>
+        <tr>
+            <td>4. {{ myresult[3][1] }}</td>
+            <td>4. {{ myresult[3][2] }}</td>
+        </tr>
+        <tr>
+            <td>5. {{ myresult[4][1] }}</td>
+            <td>5. {{ myresult[4][2] }}</td>
+        </tr>
+        <tr>
+            <td>6. {{ myresult[5][1] }}</td>
+            <td>6. {{ myresult[5][2] }}</td>
+        </tr>
+        </tbody>
+
+
+        <thead>
+        <tr>
+            <th><h4>Среда</h4></th>
+            <th><h4>Четверг</h4></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1. {{ myresult[0][3] }}</td>
+            <td>1. {{ myresult[0][4] }}</td>
+        </tr>
+        <tr>
+            <td>2. {{ myresult[1][3] }}</td>
+            <td>2. {{ myresult[1][4] }}</td>
+        </tr>
+        <tr>
+            <td>3. {{ myresult[2][3] }}</td>
+            <td>3. {{ myresult[2][4] }}</td>
+        </tr>
+        <tr>
+            <td>4. {{ myresult[3][3] }}</td>
+            <td>4. {{ myresult[3][4] }}</td>
+        </tr>
+        <tr>
+            <td>5. {{ myresult[4][3] }}</td>
+            <td>5. {{ myresult[4][4] }}</td>
+        </tr>
+        <tr>
+            <td>6. {{ myresult[5][3] }}</td>
+            <td>6. {{ myresult[5][4] }}</td>
+        </tr>
+        </tbody>
+
+
+        <thead>
+        <tr>
+            <th><h4>Пятница</h4></th>
+            <th><h4>Суббота</h4></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1. {{ myresult[0][5] }}</td>
+            <td>1. {{ myresult[0][6] }}</td>
+        </tr>
+        <tr>
+            <td>2. {{ myresult[1][5] }}</td>
+            <td>2. {{ myresult[1][6] }}</td>
+        </tr>
+        <tr>
+            <td>3. {{ myresult[2][5] }}</td>
+            <td>3. {{ myresult[2][6] }}</td>
+        </tr>
+        <tr>
+            <td>4. {{ myresult[3][5] }}</td>
+            <td>4. {{ myresult[3][6] }}</td>
+        </tr>
+        <tr>
+            <td>5. {{ myresult[4][5] }}</td>
+            <td>5. {{ myresult[4][6] }}</td>
+        </tr>
+        <tr>
+            <td>6. {{ myresult[5][5] }}</td>
+            <td>6. {{ myresult[5][6] }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="container">
+    <br>
+    <h2>Все темы</h2>
+    <br>
+    {% if myresult1[0]|length > 0 %}
+    {% for el in myresult1 %}
+    <div class="alert alert-info">
+        <p><b>{{ el[1] }} - {{ el[5] }}</b></p>
+        <h3>{{ el[2] }}</h3>
+        <p><b>Классная работа:</b> {{ el[3] }}</p>
+        <p><b>Домашнее задание:</b> {{ el[4] }}</p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>У вас еще нет тем</p>
+    {% endif %}
+</div>
+</body>
+<style>
+        .wrapper {
+        width: 95%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+    }
+    td, th {
+        width: 200px;
+    }
+    body {
+
+        background: url(../static/images/3006.jpg) no-repeat center bottom fixed;
+        background-size: cover;
+
+    }
+
+    th {
+        background: linear-gradient(to top left, yellow, orange);
+        color: black;
+    }
+</style>
+</html>

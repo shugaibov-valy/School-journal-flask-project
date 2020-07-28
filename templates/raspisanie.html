@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">Add some information about the album below, the author, or any other
+                        background context. Make it a few sentences long so folks can pick up some informative tidbits.
+                        Then, link them off to some social networking sites or contact information.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="#" class="text-white">Like on Facebook</a></li>
+                        <li><a href="#" class="text-white">Email me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                     viewBox="0 0 24 24" focusable="false">
+
+                </svg>
+                <strong>Класс 8 "1"</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    {% if myresult | length == 0 %}
+
+    <form method="post">
+        <div class="wrapper">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th><h4>Понедельник</h4></th>
+                    <th><h4>Вторник</h4></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input name="1d-1l" type="text" id="1d-1l" style="width: 100%" height="5px"></td>
+                    <td><input name="2d-1l" type="text" id="2d-1l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-2l" type="text" id="1d-2l" style="width: 100%" height="5px"></td>
+                    <td><input name="2d-2l" type="text" id="2d-2l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-3l" type="text" id="1d-3l" style="width: 100%" height="5px"></td>
+                    <td><input name="2d-3l" type="text" id="2d-3l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-4l" type="text" id="1d-4l" style="width: 100%" height="5px"></td>
+                    <td><input name="2d-4l" type="text" id="2d-4l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-5l" type="text" id="1d-5l" style="width: 100%" height="5px"></td>
+                    <td><input name="2d-5l" type="text" id="2d-5l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-6l" type="text" id="1d-6l" style="width: 100%" height="5px"></td>
+                    <td><input name="2d-6l" type="text" id="2d-6l" style="width: 100%" height="5px"></td>
+                </tr>
+                </tbody>
+
+
+                <thead>
+                <tr>
+                    <th><h4>Среда</h4></th>
+                    <th><h4>Четверг</h4></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input name="3d-1l" type="text" id="3d-1l" style="width: 100%" height="5px"></td>
+                    <td><input name="4d-1l" type="text" id="4d-1l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-2l" type="text" id="3d-2l" style="width: 100%" height="5px"></td>
+                    <td><input name="4d-2l" type="text" id="4d-2l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-3l" type="text" id="3d-3l" style="width: 100%" height="5px"></td>
+                    <td><input name="4d-3l" type="text" id="4d-3l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-4l" type="text" id="3d-4l" style="width: 100%" height="5px"></td>
+                    <td><input name="4d-4l" type="text" id="4d-4l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-5l" type="text" id="3d-5l" style="width: 100%" height="5px"></td>
+                    <td><input name="4d-5l" type="text" id="4d-5l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-6l" type="text" id="3d-6l" style="width: 100%" height="5px"></td>
+                    <td><input name="4d-6l" type="text" id="4d-6l" style="width: 100%" height="5px"></td>
+                </tr>
+                </tbody>
+
+
+                <thead>
+                <tr>
+                    <th><h4>Пятница</h4></th>
+                    <th><h4>Суббота</h4></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input name="5d-1l" type="text" id="5d-1l" style="width: 100%" height="5px"></td>
+                    <td><input name="6d-1l" type="text" id="6d-1l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-2l" type="text" id="5d-2l" style="width: 100%" height="5px"></td>
+                    <td><input name="6d-2l" type="text" id="6d-2l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-3l" type="text" id="5d-3l" style="width: 100%" height="5px"></td>
+                    <td><input name="6d-3l" type="text" id="6d-3l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-4l" type="text" id="5d-4l" style="width: 100%" height="5px"></td>
+                    <td><input name="6d-4l" type="text" id="6d-4l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-5l" type="text" id="5d-5l" style="width: 100%" height="5px"></td>
+                    <td><input name="6d-5l" type="text" id="6d-5l" style="width: 100%" height="5px"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-6l" type="text" id="5d-6l" style="width: 100%" height="5px"></td>
+                    <td><input name="6d-6l" type="text" id="6d-6l" style="width: 100%" height="5px"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+    {% else %}
+    <form method="post">
+        <div class="wrapper">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th><h4>Понедельник</h4></th>
+                    <th><h4>Вторник</h4></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input name="1d-1l" type="text" id="1d-1l" style="width: 100%" height="5px"
+                               value="{{ myresult[0][1] }}"></td>
+                    <td><input name="2d-1l" type="text" id="2d-1l" style="width: 100%" height="5px"
+                               value="{{ myresult[0][2] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-2l" type="text" id="1d-2l" style="width: 100%" height="5px"
+                               value="{{ myresult[1][1] }}"></td>
+                    <td><input name="2d-2l" type="text" id="2d-2l" style="width: 100%" height="5px"
+                               value="{{ myresult[1][2] }}"></td>
+
+                </tr>
+                <tr>
+                    <td><input name="1d-3l" type="text" id="1d-3l" style="width: 100%" height="5px"
+                               value="{{ myresult[2][1] }}"></td>
+                    <td><input name="2d-3l" type="text" id="2d-3l" style="width: 100%" height="5px"
+                               value="{{ myresult[2][2] }}"></td>
+
+                </tr>
+                <tr>
+                    <td><input name="1d-4l" type="text" id="1d-4l" style="width: 100%" height="5px"
+                               value="{{ myresult[3][1] }}"></td>
+                    <td><input name="2d-4l" type="text" id="2d-4l" style="width: 100%" height="5px"
+                               value="{{ myresult[3][2] }}"></td>
+
+                </tr>
+                <tr>
+                    <td><input name="1d-5l" type="text" id="1d-5l" style="width: 100%" height="5px"
+                               value="{{ myresult[4][1] }}"></td>
+                    <td><input name="2d-5l" type="text" id="2d-5l" style="width: 100%" height="5px"
+                               value="{{ myresult[4][2] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="1d-6l" type="text" id="1d-6l" style="width: 100%" height="5px"
+                               value="{{ myresult[5][1] }}"></td>
+                    <td><input name="2d-6l" type="text" id="2d-6l" style="width: 100%" height="5px"
+                               value="{{ myresult[5][2] }}"></td>
+
+                </tr>
+                </tbody>
+
+
+
+                <thead>
+                <tr>
+                    <th><h4>Среда</h4></th>
+                    <th><h4>Четверг</h4></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input name="3d-1l" type="text" id="3d-1l" style="width: 100%" height="5px"
+                               value="{{ myresult[0][3] }}"></td>
+                    <td><input name="4d-1l" type="text" id="4d-1l" style="width: 100%" height="5px"
+                               value="{{ myresult[0][4] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-2l" type="text" id="3d-2l" style="width: 100%" height="5px"
+                               value="{{ myresult[1][3] }}"></td>
+                    <td><input name="4d-2l" type="text" id="4d-2l" style="width: 100%" height="5px"
+                               value="{{ myresult[1][4] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-3l" type="text" id="3d-3l" style="width: 100%" height="5px"
+                               value="{{ myresult[2][3] }}"></td>
+                    <td><input name="4d-3l" type="text" id="4d-3l" style="width: 100%" height="5px"
+                               value="{{ myresult[2][4] }}"></td>
+
+                </tr>
+                <tr>
+                    <td><input name="3d-4l" type="text" id="3d-4l" style="width: 100%" height="5px"
+                               value="{{ myresult[3][3] }}"></td>
+                    <td><input name="4d-4l" type="text" id="4d-4l" style="width: 100%" height="5px"
+                               value="{{ myresult[3][4] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="3d-5l" type="text" id="3d-5l" style="width: 100%" height="5px"
+                               value="{{ myresult[4][3] }}"></td>
+                    <td><input name="4d-5l" type="text" id="4d-5l" style="width: 100%" height="5px"
+                               value="{{ myresult[4][4] }}"></td>
+
+                </tr>
+                <tr>
+                    <td><input name="3d-6l" type="text" id="3d-6l" style="width: 100%" height="5px"
+                               value="{{ myresult[5][3] }}"></td>
+                    <td><input name="4d-6l" type="text" id="4d-6l" style="width: 100%" height="5px"
+                               value="{{ myresult[5][4] }}"></td>
+                </tr>
+                </tbody>
+
+
+
+
+                <thead>
+                <tr>
+                    <th><h4>Пятница</h4></th>
+                    <th><h4>Суббота</h4></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+
+                    <td><input name="5d-1l" type="text" id="5d-1l" style="width: 100%" height="5px"
+                               value="{{ myresult[0][5] }}"></td>
+                    <td><input name="6d-1l" type="text" id="6d-1l" style="width: 100%" height="5px"
+                               value="{{ myresult[0][6] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-2l" type="text" id="5d-2l" style="width: 100%" height="5px"
+                               value="{{ myresult[1][5] }}"></td>
+                    <td><input name="6d-2l" type="text" id="6d-2l" style="width: 100%" height="5px"
+                               value="{{ myresult[1][6] }}"></td>
+                </tr>
+                <tr>
+
+                    <td><input name="5d-3l" type="text" id="5d-3l" style="width: 100%" height="5px"
+                               value="{{ myresult[2][5] }}"></td>
+                    <td><input name="6d-3l" type="text" id="6d-3l" style="width: 100%" height="5px"
+                               value="{{ myresult[2][6] }}"></td>
+                </tr>
+                <tr>
+                    <td><input name="5d-4l" type="text" id="5d-4l" style="width: 100%" height="5px"
+                               value="{{ myresult[3][5] }}"></td>
+                    <td><input name="6d-4l" type="text" id="6d-4l" style="width: 100%" height="5px"
+                               value="{{ myresult[3][6] }}"></td>
+                </tr>
+                <tr>
+
+                    <td><input name="5d-5l" type="text" id="5d-5l" style="width: 100%" height="5px"
+                               value="{{ myresult[4][5] }}"></td>
+                    <td><input name="6d-5l" type="text" id="6d-5l" style="width: 100%" height="5px"
+                               value="{{ myresult[4][6] }}"></td>
+                </tr>
+                <tr>
+
+                    <td><input name="5d-6l" type="text" id="5d-6l" style="width: 100%" height="5px"
+                               value="{{ myresult[5][5] }}"></td>
+                    <td><input name="6d-6l" type="text" id="6d-6l" style="width: 100%" height="5px"
+                               value="{{ myresult[5][6] }}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-success" value="Изменить" style="margin-left: 700px">
+    </form>
+    {% endif %}
+    <br>
+    <hr style="background-color: purple; height: 6px">
+    <div class="container" style="border-width: 20px;">
+        <br>
+        <div class="row">
+            <h2 style="margin-left: 20px;color: white; text-shadow: 1px 1px 10px #000000">Все темы</h2>
+            <a href="/add_tema" style="margin-left: 700px"><input type="button" class="btn btn-success"
+                                                                  value="+ Добавить тему"></a>
+        </div>
+        <br>
+        {% if articles[0]|length > 0 %}
+        {% for el in articles %}
+        <div class="alert alert-info">
+            <p><b>{{ el[1] }}</b></p>
+            <h3>{{ el[2] }}</h3>
+            <p><b>Классная работа:</b> {{ el[3] }}</p>
+            <p><b>Домашнее задание:</b> {{ el[4] }}</p>
+            <a href="/all_raspisanie/{{ el[0] }}/del" class="btn btn-danger">Удалить</a>
+            <a href="/all_raspisanie/{{ el[0] }}/update" class="btn btn-success">Редактировать</a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>У вас еще нет тем</p>
+        {% endif %}
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')
+
+
+
+
+
+
+
+
+
+
+</script>
+<script src="/docs/4.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+        crossorigin="anonymous"></script>
+
+</body>
+<style>
+    .wrapper {
+        width: 95%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #D9DDDC;
+    }
+    td {
+        width: 200px;
+
+    }
+    th {
+        background: linear-gradient(to top left, yellow, orange);
+        color: black;
+    }
+    body {
+        background: url(../static/images/3006.jpg) no-repeat center bottom fixed;
+        background-size: cover;
+
+    }
+
+
+
+</style>
+</html>

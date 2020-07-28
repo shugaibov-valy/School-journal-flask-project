@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <br>
+    <h2>Все темы</h2>
+    <br>
+    {% if articles[0]|length > 0 %}
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <p><b>{{ el[1] }}</b></p>
+        <h3>{{ el[2] }}</h3>
+        <p><b>Классная работа:</b> {{ el[3] }}</p>
+        <p><b>Домашнее задание:</b> {{ el[4] }}</p>
+        <a href="/all_raspisanie/{{ el[0] }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/all_raspisanie/{{ el[0] }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>У вас еще нет тем</p>
+    {% endif %}
+</div>
+</body>
+</html>

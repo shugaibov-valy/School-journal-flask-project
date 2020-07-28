@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic);
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: black;
+  background-color: red;
+}
+
+/* --------------------------------
+
+Основные стили
+
+-------------------------------- */
+header {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background: #2d313f;
+}
+header h1 {
+  color: white;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 300px;
+    line-height: 300px;
+  }
+}
+
+.container-chart {
+  width: 100%;
+  margin:20px auto;
+  max-width: 700px;
+
+}
+
+/*График #1*/
+.chart1.ct-chart .ct-series.ct-series-a .ct-line {
+  stroke: #F04D3A;
+
+  stroke-width: 5px;
+  stroke-dasharray: 5px 5px;
+  animation: dashoffset-seven 200ms infinite linear;
+}
+.chart1.ct-chart .ct-series.ct-series-a .ct-point{
+  stroke: #FFCD42;
+}
+
+.chart1.ct-chart .ct-series.ct-series-b .ct-line {
+  stroke: #4DB543;
+  stroke-width: 5px;
+  stroke-dasharray: 5px 5px;
+  animation: dashoffset-seven 200ms infinite linear;
+}
+.chart1.ct-chart .ct-series.ct-series-b .ct-point{
+  stroke: #0FB500;
+}
+
+@keyframes dashoffset-seven {
+  0% {
+    stroke-dashoffset: 7px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}

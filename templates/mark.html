@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<h1></h1>
+<form method="POST">
+    <div class="container">
+        <div class="col-md-5 mb-3" style="margin-left: -15px">
+            <label for="date"><h5><b>Дата сегодня {{ data }}</b></h5></label>
+            <input class="form-control" id="date" name="date" width="30%" maxlength="5" placeholder="Введите дату">
+            <small class="form-text text-muted">Например: 27-05</small>
+        </div>
+            <div class="col-md-5 mb-3" style="margin-left: -15px">
+                <select class="custom-select d-block w-70" id="family" name="family" required>
+                    <option value="">Выберите фамилию ученика</option>
+                    <option>Иванов</option>
+                    <option>Петров</option>
+                    <option>Сидоров</option>
+                </select>
+                <div class="invalid-feedback">
+                    Вы не выбрали фамилию.
+                </div>
+            </div>
+
+        <div class="col-md-5 mb-3" style="margin-left: -15px">
+
+            <select class="custom-select d-block w-70" id="mark" name="mark" required>
+                <option value="">Выберите отметку</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>н</option>
+                <option>б</option>
+            </select>
+            <div class="invalid-feedback">
+                Вы не выбрали отметку.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Отправить</button>
+    </div>
+</form>
+
+
+</body>
+<style>
+    body {
+        background: url(../static/images/3006.jpg) no-repeat center bottom fixed;
+        background-size: cover;
+        color: black;
+    }
+</style>
+</html>
