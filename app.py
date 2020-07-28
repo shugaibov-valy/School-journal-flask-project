@@ -8,8 +8,8 @@ count = 0
 mydb = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd='Elmurza0506',
-    database='raspisanie_mysql_db2')
+    passwd='password',
+    database='db')
 app = Flask(__name__)
 
 login = 0
