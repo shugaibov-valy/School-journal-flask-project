@@ -1,0 +1,6 @@
+flask
+json
+mysql
+js
+jquery
+bootstrap
